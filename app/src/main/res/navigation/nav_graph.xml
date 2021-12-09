@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/searchFragment">
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.mehmetalivargun.podcast.ui.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_podcastDetailFragment"
+            app:destination="@id/podcastDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/podcastDetailFragment"
+        android:name="com.mehmetalivargun.podcast.ui.PodcastDetailFragment"
+        android:label="fragment_podcast_detail"
+        tools:layout="@layout/fragment_podcast_detail">
+        <argument
+            android:name="podcastID"
+            app:argType="integer"
+            android:defaultValue="-1" />
+    </fragment>
+
+
+</navigation>

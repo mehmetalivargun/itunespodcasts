@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginBottom="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/artWork"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:contentDescription="asd"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+
+    <TextView
+        android:id="@+id/collectionName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="2dp"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:maxLines="1"
+        android:maxLength="35"
+        android:textColor="@color/black"
+        android:textSize="14sp"
+        app:autoSizeMaxTextSize="20sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toTopOf="@+id/releaseDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/artWork"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lineHeight="18dp"
+        tools:text="Rick" />
+
+    <TextView
+        android:id="@+id/releaseDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/collectionName"
+        app:layout_constraintStart_toStartOf="@+id/collectionName"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Çıkış : 12 Haziran 2021" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
